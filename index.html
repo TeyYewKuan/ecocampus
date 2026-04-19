@@ -26,9 +26,9 @@
 
                     colors: {
 
-                        primary: '#10b981', // 绿色调
+                        primary: '#10b981', 
 
-                        darkBg: '#020617', // 更深的背景
+                        darkBg: '#020617', 
 
                         darkCard: '#0f172a',
 
@@ -447,29 +447,25 @@
 
 
     <script>
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const themeIcon = document.getElementById('theme-icon');
-        const html = document.documentElement;
 
-        // 初始化检查之前的设置
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            html.classList.add('dark');
-            themeIcon.classList.replace('fa-moon', 'fa-sun');
-        }
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        const themeIcon = document.getElementById('theme-icon');
+
+        
 
         themeToggleBtn.addEventListener('click', () => {
-            html.classList.toggle('dark');
-            
-            if (html.classList.contains('dark')) {
-                themeIcon.classList.replace('fa-moon', 'fa-sun');
-                localStorage.theme = 'dark';
-            } else {
-                themeIcon.classList.replace('fa-sun', 'fa-moon');
-                localStorage.theme = 'light';
-            }
+
+            document.documentElement.classList.toggle('dark');
+
+            themeIcon.classList.toggle('fa-moon');
+
+            themeIcon.classList.toggle('fa-sun');
+
         });
+
     </script>
 
 </body>
 
-</html> 
+</html>
