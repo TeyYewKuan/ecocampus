@@ -1,185 +1,471 @@
 <!DOCTYPE html>
+
 <html lang="en" class="scroll-smooth">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>EcoCampus - Protecting Our Planet</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <script>
+
         tailwind.config = {
-            darkMode: 'class', // 必须设置为 class，按钮切换才有用
+
+            darkMode: 'class',
+
             theme: {
+
                 extend: {
+
                     colors: {
-                        primary: '#10b981', 
-                        darkBg: '#020617',    // 整个页面的极深蓝底色
-                        darkCard: '#0f172a',  // 卡片、表单的稍微浅一点的底色
-                        accentBlue: '#38bdf8' // 亮蓝色（用于图标或高亮文字）
+
+                        primary: '#10b981', // 绿色调
+
+                        darkBg: '#020617', // 更深的背景
+
+                        darkCard: '#0f172a',
+
                     }
+
                 }
+
             }
+
         }
+
     </script>
+
 </head>
+
 <body class="bg-white text-slate-800 dark:bg-darkBg dark:text-slate-200 font-sans antialiased transition-colors duration-300">
 
+
+
     <nav class="fixed w-full z-50 bg-white/80 dark:bg-darkBg/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
             <div class="flex justify-between items-center h-16">
+
                 <div class="flex-shrink-0">
+
                     <a href="#" class="text-2xl font-bold text-slate-900 dark:text-white">EcoCampus</a>
+
                 </div>
+
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="hover:text-emerald-500 dark:hover:text-accentBlue transition-colors">Home</a>
-                    <a href="#services" class="hover:text-emerald-500 dark:hover:text-accentBlue transition-colors">Services</a>
-                    <a href="#about" class="hover:text-emerald-500 dark:hover:text-accentBlue transition-colors">About</a>
-                    <a href="#team" class="hover:text-emerald-500 dark:hover:text-accentBlue transition-colors">Team</a>
-                    <a href="#contact" class="hover:text-emerald-500 dark:hover:text-accentBlue transition-colors">Contact</a>
-                    <button id="theme-toggle" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-accentBlue">
-                        <i id="theme-icon" class="fas fa-moon"></i>
-                    </button>
+
+                    <a href="#home" class="hover:text-emerald-500 transition-colors">Home</a>
+
+                    <a href="#services" class="hover:text-emerald-500 transition-colors">Services</a>
+
+                    <a href="#about" class="hover:text-emerald-500 transition-colors">About</a>
+
+                    <a href="#team" class="hover:text-emerald-500 transition-colors">Team</a>
+
+                    <a href="#contact" class="hover:text-emerald-500 transition-colors">Contact</a>
+
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800"><i id="theme-icon" class="fas fa-moon"></i></button>
+
                 </div>
+
             </div>
+
         </div>
+
     </nav>
 
+
+
     <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-50 dark:bg-darkBg">
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
             <div class="lg:flex lg:items-center">
+
                 <div class="lg:w-1/2">
+
                     <h1 class="text-5xl lg:text-7xl font-bold text-slate-900 dark:text-white leading-tight mb-6">
-                        Empowering Students to <span class="text-emerald-600 dark:text-accentBlue">Protect the Earth</span>
+
+                        Empowering Students to Protect the Earth
+
                     </h1>
+
                     <p class="text-xl text-slate-600 dark:text-slate-400 mb-8">
+
                         Turning campus awareness into sustainable action for a greener future.
+
                     </p>
+
                     <div class="flex space-x-4">
-                        <a href="#contact" class="px-8 py-3 bg-slate-900 dark:bg-accentBlue text-white dark:text-slate-900 font-semibold rounded-lg hover:opacity-90 transition-all">Get Started <i class="fas fa-arrow-right ml-2"></i></a>
-                        <a href="#about" class="px-8 py-3 border border-slate-400 dark:border-slate-600 dark:text-slate-300 rounded-lg font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">Learn More</a>
+
+                        <a href="#contact" class="px-8 py-3 bg-white text-black font-semibold rounded-lg hover:bg-slate-100 transition-all">Get Started <i class="fas fa-arrow-right ml-2"></i></a>
+
+                        <a href="#about" class="px-8 py-3 border border-slate-400 rounded-lg font-semibold hover:bg-slate-800 transition-all">Learn More</a>
+
                     </div>
+
                 </div>
+
                 <div class="lg:w-1/2 mt-12 lg:mt-0">
-                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09" alt="Hero" class="rounded-3xl shadow-2xl ring-1 ring-slate-200 dark:ring-slate-700">
+
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09" alt="Hero" class="rounded-3xl shadow-2xl">
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <section id="services" class="py-24 bg-white dark:bg-darkBg transition-colors">
+
+
+    <section id="services" class="py-24 bg-white dark:bg-slate-50 transition-colors">
+
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-4">Our Services</h2>
-            <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-16">Practical solutions for a sustainable campus life.</p>
+
+            <h2 class="text-4xl font-bold text-slate-900 mb-4">Our Services</h2>
+
+            <p class="text-slate-600 max-w-2xl mx-auto mb-16">We empower the student community with practical solutions to protect the Earth. Our mission focuses on smart energy use, sustainable mobility, and eco-friendly daily habits.</p>
+
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div class="p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-darkCard rounded-2xl hover:shadow-xl transition-all">
-                    <i class="fas fa-car text-3xl mb-6 text-emerald-600 dark:text-accentBlue"></i>
-                    <h3 class="font-bold text-xl mb-4 dark:text-slate-100">Shared Transportation</h3>
-                    <p class="text-slate-500 dark:text-slate-400 text-sm">Reducing carbon emissions via smart mobility.</p>
+
+                <div class="p-8 border border-slate-200 rounded-2xl hover:shadow-xl transition-all">
+
+                    <i class="fas fa-car text-3xl mb-6"></i>
+
+                    <h3 class="font-bold text-xl mb-4">Shared Transportation</h3>
+
+                    <p class="text-slate-500 text-sm">We promote cycling, walking, and campus shuttles to slash carbon emissions.</p>
+
                 </div>
-                <div class="p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-darkCard rounded-2xl hover:shadow-xl transition-all">
-                    <i class="fas fa-recycle text-3xl mb-6 text-emerald-600 dark:text-accentBlue"></i>
-                    <h3 class="font-bold text-xl mb-4 dark:text-slate-100">Resource Recycling</h3>
-                    <p class="text-slate-500 dark:text-slate-400 text-sm">Encouraging a circular lifestyle and zero waste.</p>
+
+                <div class="p-8 border border-slate-200 rounded-2xl hover:shadow-xl transition-all">
+
+                    <i class="fas fa-recycle text-3xl mb-6"></i>
+
+                    <h3 class="font-bold text-xl mb-4">Resource Recycling</h3>
+
+                    <p class="text-slate-500 text-sm">Beyond just recycling, we encourage a circular lifestyle—reducing plastic use.</p>
+
                 </div>
-                <div class="p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-darkCard rounded-2xl hover:shadow-xl transition-all">
-                    <i class="fas fa-tree text-3xl mb-6 text-emerald-600 dark:text-accentBlue"></i>
-                    <h3 class="font-bold text-xl mb-4 dark:text-slate-100">Tree Planting</h3>
-                    <p class="text-slate-500 dark:text-slate-400 text-sm">Restore biodiversity and breathe cleaner air.</p>
+
+                <div class="p-8 border border-slate-200 rounded-2xl hover:shadow-xl transition-all">
+
+                    <i class="fas fa-tree text-3xl mb-6"></i>
+
+                    <h3 class="font-bold text-xl mb-4">Tree Planting Programs</h3>
+
+                    <p class="text-slate-500 text-sm">Join our events to restore local biodiversity and breathe cleaner air.</p>
+
                 </div>
-                <div class="p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-darkCard rounded-2xl hover:shadow-xl transition-all">
-                    <i class="fas fa-sun text-3xl mb-6 text-emerald-600 dark:text-accentBlue"></i>
-                    <h3 class="font-bold text-xl mb-4 dark:text-slate-100">Solar Panels</h3>
-                    <p class="text-slate-500 dark:text-slate-400 text-sm">Advocating for renewable energy adoption.</p>
+
+                <div class="p-8 border border-slate-200 rounded-2xl hover:shadow-xl transition-all">
+
+                    <i class="fas fa-sun text-3xl mb-6"></i>
+
+                    <h3 class="font-bold text-xl mb-4">Solar Panel Installation</h3>
+
+                    <p class="text-slate-500 text-sm">We advocate for solar energy adoption and educate students on renewable tech.</p>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <section id="about" class="py-24 bg-slate-50 dark:bg-darkCard/30">
+
+
+    <section id="about" class="py-24 bg-slate-50">
+
         <div class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-16">
+
             <div class="lg:w-1/2">
+
                 <img src="https://images.unsplash.com/photo-1497366216548-37526070297c" alt="About" class="rounded-2xl shadow-lg">
+
             </div>
+
             <div class="lg:w-1/2">
-                <h2 class="text-4xl font-bold mb-6 dark:text-white">About us</h2>
-                <p class="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
-                    EcoCampus is a movement dedicated to championing sustainable living and protecting our planet.
+
+                <h2 class="text-4xl font-bold mb-6">About us</h2>
+
+                <p class="text-slate-600 mb-8 leading-relaxed">
+
+                    EcoCampus is more than just an organization; it is a movement dedicated to protecting our planet and championing sustainable living. We believe that when students and communities unite, small actions ripple into a massive global impact.
+
                 </p>
+
                 <div class="grid grid-cols-3 gap-8">
+
                     <div class="text-center">
-                        <div class="text-3xl font-bold dark:text-accentBlue">1000+</div>
-                        <p class="text-sm text-slate-500 dark:text-slate-400">People Helped</p>
+
+                        <i class="fas fa-users text-2xl mb-2"></i>
+
+                        <div class="text-3xl font-bold">1000+</div>
+
+                        <p class="text-sm text-slate-500">People Supported</p>
+
                     </div>
+
                     <div class="text-center">
-                        <div class="text-3xl font-bold dark:text-accentBlue">50+</div>
-                        <p class="text-sm text-slate-500 dark:text-slate-400">Projects</p>
+
+                        <i class="fas fa-medal text-2xl mb-2"></i>
+
+                        <div class="text-3xl font-bold">50+</div>
+
+                        <p class="text-sm text-slate-500">Projects Completed</p>
+
                     </div>
+
                     <div class="text-center">
-                        <div class="text-3xl font-bold dark:text-accentBlue">100%</div>
-                        <p class="text-sm text-slate-500 dark:text-slate-400">Commitment</p>
+
+                        <i class="fas fa-bullseye text-2xl mb-2"></i>
+
+                        <div class="text-3xl font-bold">100%</div>
+
+                        <p class="text-sm text-slate-500">Commitment</p>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <section id="contact" class="py-24 bg-white dark:bg-darkBg">
+
+
+    <section id="team" class="py-24 bg-white">
+
+        <div class="max-w-7xl mx-auto px-4 text-center">
+
+            <h2 class="text-4xl font-bold mb-4">Meet Our Team</h2>
+
+            <p class="text-slate-500 mb-16">A diverse group of passionate individuals dedicated to protecting our planet.</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+                <div>
+
+                    <img src="https://github.com/TeyYewKuan/Pec/blob/main/tey.png.png?raw=true" class="w-full aspect-[3/4] object-cover rounded-2xl mb-4 bg-slate-100">
+
+                    <h3 class="font-bold text-lg">Tey Yew Kuan</h3>
+
+                    <p class="text-slate-500 text-sm">Project Leader / Founder</p>
+
+                </div>
+
+                <div>
+
+                    <img src="https://github.com/TeyYewKuan/Pec/blob/main/hew.png.png?raw=true" class="w-full aspect-[3/4] object-cover rounded-2xl mb-4 bg-slate-100">
+
+                    <h3 class="font-bold text-lg">Hew Hong Shi</h3>
+
+                    <p class="text-slate-500 text-sm">Creative Designer</p>
+
+                </div>
+
+                <div>
+
+                    <img src="https://github.com/TeyYewKuan/Pec/blob/main/goei.png.png?raw=true" class="w-full aspect-[3/4] object-cover rounded-2xl mb-4 bg-slate-100">
+
+                    <h3 class="font-bold text-lg">Goei Xuan</h3>
+
+                    <p class="text-slate-500 text-sm">Sustainability Coordinator</p>
+
+                </div>
+
+                <div>
+
+                    <img src="https://github.com/TeyYewKuan/Pec/blob/main/yong.png.png?raw=true" class="w-full aspect-[3/4] object-cover rounded-2xl mb-4 bg-slate-100">
+
+                    <h3 class="font-bold text-lg">Yong Yi Kang</h3>
+
+                    <p class="text-slate-500 text-sm">Technical Specialist</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="contact" class="py-24 bg-slate-50">
+
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-16 dark:text-white">Secure Our Future</h2>
-            <div class="grid lg:grid-cols-2 gap-16">
-                <div class="space-y-8">
-                    <div class="flex items-center space-x-4">
-                        <div class="p-4 bg-slate-100 dark:bg-darkCard rounded-xl dark:text-accentBlue"><i class="fas fa-envelope"></i></div>
-                        <div><p class="text-sm text-slate-500 dark:text-slate-400">Email</p><p class="font-semibold dark:text-white">D250313C@sc.edu.my</p></div>
-                    </div>
-                    <div class="flex items-center space-x-4">
-                        <div class="p-4 bg-slate-100 dark:bg-darkCard rounded-xl dark:text-accentBlue"><i class="fas fa-map-marker-alt"></i></div>
-                        <div><p class="text-sm text-slate-500 dark:text-slate-400">Address</p><p class="font-semibold dark:text-white">Southern University College</p></div>
-                    </div>
-                </div>
-                <form class="bg-slate-50 dark:bg-darkCard p-8 rounded-2xl space-y-4 border border-slate-200 dark:border-slate-800">
-                    <input type="text" placeholder="Your name" class="w-full p-3 bg-white dark:bg-darkBg border dark:border-slate-700 rounded-lg dark:text-white">
-                    <input type="email" placeholder="Email" class="w-full p-3 bg-white dark:bg-darkBg border dark:border-slate-700 rounded-lg dark:text-white">
-                    <textarea placeholder="Message" class="w-full p-3 bg-white dark:bg-darkBg border dark:border-slate-700 rounded-lg h-32 dark:text-white"></textarea>
-                    <button class="w-full py-3 bg-slate-900 dark:bg-accentBlue text-white dark:text-slate-900 rounded-lg font-bold">Send Message</button>
-                </form>
+
+            <div class="text-center mb-16">
+
+                <h2 class="text-4xl font-bold mb-4">Secure Our Future</h2>
+
+                <p class="text-slate-500">The healing starts here. Reach out to the 'Protect' team today.</p>
+
             </div>
+
+            <div class="grid lg:grid-cols-2 gap-16">
+
+                <div class="space-y-8">
+
+                    <div class="flex items-center space-x-4">
+
+                        <div class="p-4 bg-white rounded-xl shadow-sm"><i class="fas fa-phone"></i></div>
+
+                        <div><p class="text-sm text-slate-500">Phone</p><p class="font-semibold">011-65568558</p></div>
+
+                    </div>
+
+                    <div class="flex items-center space-x-4">
+
+                        <div class="p-4 bg-white rounded-xl shadow-sm"><i class="fas fa-envelope"></i></div>
+
+                        <div><p class="text-sm text-slate-500">Email</p><p class="font-semibold">D250313C@sc.edu.my</p></div>
+
+                    </div>
+
+                    <div class="flex items-center space-x-4">
+
+                        <div class="p-4 bg-white rounded-xl shadow-sm"><i class="fas fa-map-marker-alt"></i></div>
+
+                        <div><p class="text-sm text-slate-500">Address</p><p class="font-semibold">Southern University College, Skudai, Johor.</p></div>
+
+                    </div>
+
+                </div>
+
+                <form class="bg-white p-8 rounded-2xl shadow-sm space-y-4">
+
+                    <input type="text" placeholder="Your name" class="w-full p-3 border rounded-lg">
+
+                    <input type="email" placeholder="your.email@example.com" class="w-full p-3 border rounded-lg">
+
+                    <textarea placeholder="Tell us about your project..." class="w-full p-3 border rounded-lg h-32"></textarea>
+
+                    <button class="w-full py-3 bg-slate-900 text-white rounded-lg font-bold">Send Message</button>
+
+                </form>
+
+            </div>
+
         </div>
+
     </section>
 
-    <footer class="bg-black text-white py-12 text-center border-t border-slate-900">
-        <h3 class="text-2xl font-bold mb-4">EcoCampus</h3>
-        <p class="text-slate-500 text-sm">© 2026 EcoCampus. All rights reserved.</p>
+
+
+    <footer class="bg-black text-white py-16">
+
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-12">
+
+            <div class="col-span-1">
+
+                <h3 class="text-2xl font-bold mb-4">EcoCampus</h3>
+
+                <p class="text-slate-400 text-sm">Empowering students to create sustainable change and protect our planet for future generations.</p>
+
+            </div>
+
+            <div>
+
+                <h4 class="font-bold mb-4">Quick Links</h4>
+
+                <ul class="text-slate-400 text-sm space-y-2">
+
+                    <li><a href="#home">Home</a></li>
+
+                    <li><a href="#services">Services</a></li>
+
+                    <li><a href="#about">About</a></li>
+
+                    <li><a href="#team">Team</a></li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h4 class="font-bold mb-4">Services</h4>
+
+                <ul class="text-slate-400 text-sm space-y-2">
+
+                    <li>Shared Transportation</li>
+
+                    <li>Resource Recycling</li>
+
+                    <li>Tree Planting</li>
+
+                    <li>Solar Installation</li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h4 class="font-bold mb-4">Follow Us</h4>
+
+                <div class="flex space-x-4">
+
+                    <i class="fab fa-facebook cursor-pointer"></i>
+
+                    <i class="fab fa-twitter cursor-pointer"></i>
+
+                    <i class="fab fa-linkedin cursor-pointer"></i>
+
+                    <i class="fab fa-instagram cursor-pointer"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="text-center mt-16 text-slate-500 text-xs border-t border-slate-800 pt-8">
+
+            &copy; 2026 EcoCampus. All rights reserved.
+
+        </div>
+
     </footer>
 
-    <script>
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const themeIcon = document.getElementById('theme-icon');
-        const html = document.documentElement;
 
-        // 点击切换功能
+
+    <script>
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        const themeIcon = document.getElementById('theme-icon');
+
+        
+
         themeToggleBtn.addEventListener('click', () => {
-            html.classList.toggle('dark');
-            
-            // 切换图标 (月亮变太阳)
-            if (html.classList.contains('dark')) {
-                themeIcon.classList.replace('fa-moon', 'fa-sun');
-                localStorage.theme = 'dark';
-            } else {
-                themeIcon.classList.replace('fa-sun', 'fa-moon');
-                localStorage.theme = 'light';
-            }
+
+            document.documentElement.classList.toggle('dark');
+
+            themeIcon.classList.toggle('fa-moon');
+
+            themeIcon.classList.toggle('fa-sun');
+
         });
 
-        // 页面加载时：检查之前的选择或系统的偏好
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            html.classList.add('dark');
-            if(themeIcon) themeIcon.classList.replace('fa-moon', 'fa-sun');
-        } else {
-            html.classList.remove('dark');
-            if(themeIcon) themeIcon.classList.replace('fa-sun', 'fa-moon');
-        }
     </script>
+
 </body>
-</html>
+
+</html> 
