@@ -1,129 +1,63 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoCampus - Sustainable Future</title>
+    <title>Pec - ProtectEarth Center</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
         tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        darkBg: '#0f172a',
-                        darkCard: '#1e293b',
-                    }
-                }
-            }
+            darkMode: 'class', 
         }
     </script>
-    <style>
-        body { transition: background-color 0.3s ease, color 0.3s ease; }
-    </style>
 </head>
-<body class="bg-slate-50 text-slate-900 dark:bg-darkBg dark:text-slate-100 font-sans antialiased">
+<body class="bg-white text-gray-900 dark:bg-slate-900 dark:text-gray-100 transition-colors duration-300">
 
-    <nav class="fixed w-full z-50 bg-white/90 dark:bg-darkBg/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <a href="#" class="text-2xl font-bold text-emerald-600 dark:text-emerald-400">EcoCampus</a>
+    <nav class="bg-white dark:bg-slate-900 border-b dark:border-slate-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
+            <div class="text-xl font-bold text-green-600">PEC</div>
+            
+            <div class="flex items-center space-x-6">
+                <a href="#home" class="hover:text-green-500">Home</a>
+                <a href="#services" class="hover:text-green-500">Services</a>
+                <a href="#team" class="hover:text-green-500">Team</a>
                 
-                <div class="flex items-center space-x-8">
-                    <div class="hidden md:flex space-x-8 font-medium">
-                        <a href="#home" class="hover:text-emerald-500">Home</a>
-                        <a href="#services" class="hover:text-emerald-500">Services</a>
-                        <a href="#about" class="hover:text-emerald-500">About</a>
-                        <a href="#team" class="hover:text-emerald-500">Team</a>
-                    </div>
-                    <button id="theme-toggle" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:ring-2 ring-emerald-500 transition-all">
-                        <i id="theme-icon" class="fas fa-moon"></i>
-                    </button>
-                </div>
+                <button id="mode-toggle" class="p-2 rounded-full bg-gray-100 dark:bg-slate-800">
+                    <i id="mode-icon" class="fas fa-moon text-gray-600 dark:text-yellow-400"></i>
+                </button>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="pt-32 pb-20 lg:pt-48 lg:pb-32 dark:bg-darkBg transition-colors">
-        <div class="max-w-7xl mx-auto px-4 lg:flex lg:items-center">
-            <div class="lg:w-1/2">
-                <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-6">
-                    Let Us Help You <span class="text-emerald-500">Protect The Earth</span>
-                </h1>
-                <p class="text-xl text-slate-600 dark:text-slate-400 mb-8">Delivering sustainable solutions for a cleaner and greener future.</p>
-                <div class="flex space-x-4">
-                    <a href="#contact" class="px-8 py-3 bg-emerald-600 text-white rounded-lg font-bold hover:bg-emerald-700 transition-all shadow-lg shadow-emerald-500/20">Get Started</a>
-                    <a href="#about" class="px-8 py-3 border border-slate-300 dark:border-slate-700 rounded-lg font-bold hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">Learn More</a>
-                </div>
-            </div>
-            <div class="lg:w-1/2 mt-12 lg:mt-0">
-                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09" class="rounded-3xl shadow-2xl ring-1 ring-slate-200 dark:ring-slate-700">
-            </div>
-        </div>
+    <section id="home" class="py-20 text-center">
+        <h1 class="text-4xl font-bold mb-4">Protect The Earth</h1>
+        <p class="text-gray-600 dark:text-gray-400">Your sustainable partner.</p>
     </section>
 
-    <section id="services" class="py-24 bg-white dark:bg-darkCard transition-colors">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold mb-16">Our Services</h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="p-8 bg-slate-50 dark:bg-darkBg rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-emerald-500 transition-all group">
-                    <i class="fas fa-car-side text-3xl text-emerald-500 mb-6 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-xl mb-4">Shared Transport</h3>
-                    <p class="text-slate-500 dark:text-slate-400 text-sm">Reducing traffic congestion and carbon emissions for efficient travel.</p>
-                </div>
-                <div class="p-8 bg-slate-50 dark:bg-darkBg rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-emerald-500 transition-all group">
-                    <i class="fas fa-recycle text-3xl text-emerald-500 mb-6 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-xl mb-4">Resource Recycling</h3>
-                    <p class="text-slate-500 dark:text-slate-400 text-sm">Processing recyclable materials to reduce waste and protect nature.</p>
-                </div>
-                <div class="p-8 bg-slate-50 dark:bg-darkBg rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-emerald-500 transition-all group">
-                    <i class="fas fa-tree text-3xl text-emerald-500 mb-6 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-xl mb-4">Tree Planting</h3>
-                    <p class="text-slate-500 dark:text-slate-400 text-sm">Restoring nature and improving air quality for future generations.</p>
-                </div>
-                <div class="p-8 bg-slate-50 dark:bg-darkBg rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-emerald-500 transition-all group">
-                    <i class="fas fa-solar-panel text-3xl text-emerald-500 mb-6 group-hover:scale-110 transition-transform"></i>
-                    <h3 class="font-bold text-xl mb-4">Solar Installation</h3>
-                    <p class="text-slate-500 dark:text-slate-400 text-sm">Using renewable energy to reduce costs and save the planet.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <script>
+   
+        const btn = document.getElementById('mode-toggle');
+        const icon = document.getElementById('mode-icon');
+        const html = document.documentElement;
 
-    <section id="about" class="py-24 bg-slate-50 dark:bg-darkBg transition-colors">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-16">
-            <div class="lg:w-1/2">
-                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c" class="rounded-2xl shadow-xl">
-            </div>
-            <div class="lg:w-1/2">
-                <h2 class="text-4xl font-bold mb-6">About Us</h2>
-                <p class="text-slate-600 dark:text-slate-400 mb-10 leading-relaxed text-lg">
-                    EcoCampus is an environmental organization dedicated to protecting the Earth and promoting sustainable living. We believe that small actions can make a big difference.
-                </p>
-                <div class="grid grid-cols-3 gap-4">
-                    <div class="p-4 bg-white dark:bg-darkCard rounded-xl text-center shadow-sm">
-                        <div class="text-3xl font-bold text-emerald-500">1000+</div>
-                        <div class="text-xs text-slate-500 uppercase mt-1">Supported</div>
-                    </div>
-                    <div class="p-4 bg-white dark:bg-darkCard rounded-xl text-center shadow-sm">
-                        <div class="text-3xl font-bold text-emerald-500">50+</div>
-                        <div class="text-xs text-slate-500 uppercase mt-1">Completed</div>
-                    </div>
-                    <div class="p-4 bg-white dark:bg-darkCard rounded-xl text-center shadow-sm">
-                        <div class="text-3xl font-bold text-emerald-500">100%</div>
-                        <div class="text-xs text-slate-500 uppercase mt-1">Commitment</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        btn.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            
+            if (html.classList.contains('dark')) {
+                icon.classList.replace('fa-moon', 'fa-sun');
+                localStorage.theme = 'dark';
+            } else {
+                icon.classList.replace('fa-sun', 'fa-moon');
+                localStorage.theme = 'light';
+            }
+        });
 
-    <section id="team" class="py-24 bg-white dark:bg-darkCard transition-colors">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold mb-16">Meet Our Team</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-                <div class="bg-slate-50 dark:bg-darkBg p-6 rounded-3xl border border-slate-100 dark:border-slate-800 shadow-sm">
-                    <img src="https://github.com/TeyYewKuan/Pec/blob/main/tey.png.png?raw=true" class="w-full aspect-[3/4] object-cover rounded-2xl mb-6">
-                    <h3 class="font-bold text-xl">Tey Yew Kuan</h3>
-                    <p class="text-emerald-500 text-sm font-medium">CEO & Founder</p>
+      
+        if (localStorage.theme === 'dark') {
+            html.classList.add('dark');
+            icon.classList.replace('fa-moon', 'fa-sun');
+        }
+    </script>
+</body>
+</html>
