@@ -92,6 +92,66 @@
         </div>
     </section>
 
+   <script>
+    // Data Kuiz dalam Bahasa Melayu
+    const quizData = [
+        {
+            question: "Adakah anda patut tutup lampu jika keluar dari bilik lebih daripada 10 minit?",
+            options: ["Ya, tutup lampu sentiasa", "Tidak perlu, biarkan terbuka lebih jimat"],
+            correct: 0,
+            feedback: "✅ Betul! Menutup lampu adalah cara termudah untuk menjimatkan tenaga."
+        },
+        {
+            question: "Mengitar semula satu tin aluminium dapat menjimatkan tenaga yang cukup untuk?",
+            options: ["Menonton TV selama 3 jam", "Menggunakan komputer selama 1 jam"],
+            correct: 0,
+            feedback: "✅ Tepat sekali! Mengitar semula aluminium menjimatkan 95% tenaga berbanding membuat tin baru."
+        },
+        {
+            question: "Manakah cara pengangkutan yang paling mesra alam?",
+            options: ["Memandu kereta sendirian", "Berjalan kaki, berbasikal atau berkongsi kenderaan"],
+            correct: 1,
+            feedback: "✅ Markah penuh! Mengurangkan penggunaan kereta peribadi dapat menurunkan pelepasan karbon dengan drastik."
+        }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+
+    const questionText = document.getElementById('question-text');
+    const optionsContainer = document.getElementById('options-container');
+    const currentIndex = document.getElementById('current-index');
+    const totalQuestions = document.getElementById('total-questions');
+    const scoreDisplay = document.getElementById('score-display');
+    const quizContainer = document.getElementById('quiz-container');
+    const resultBox = document.getElementById('result-box');
+
+    function loadQuiz() {
+        const currentData = quizData[currentQuestion];
+        questionText.innerText = currentData.question;
+        currentIndex.innerText = currentQuestion + 1;
+        totalQuestions.innerText = quizData.length;
+        
+        optionsContainer.innerHTML = '';
+        currentData.options.forEach((option, index) => {
+            const btn = document.createElement('button');
+            btn.className = "w-full py-4 px-6 border border-slate-200 dark:border-slate-700 rounded-xl hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all text-left font-medium dark:text-slate-300";
+            btn.innerText = option;
+            btn.onclick = () => selectAnswer(index);
+            optionsContainer.appendChild(btn);
+        });
+    }
+
+    function selectAnswer(index) {
+        // Papar maklum balas (Optional alert atau boleh tambah UI di sini)
+        if (index === quizData[currentQuestion].correct) {
+            score++;
+            scoreDisplay.innerText = `Skor: ${score}`;
+        }
+        
+        currentQuestion++;
+        if (currentQuestion < quizData.length) {
+
     <section id="about" class="py-24 bg-slate-50 dark:bg-darkBg">
         <div class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-16">
             <div class="lg:w-1/2">
