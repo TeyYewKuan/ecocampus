@@ -173,12 +173,26 @@
                         <div><p class="text-sm text-slate-500">Address</p><p class="font-semibold dark:text-white">Southern University College, Skudai, Johor.</p></div>
                     </div>
                 </div>
-                <form class="bg-white dark:bg-darkCard p-8 rounded-2xl shadow-sm space-y-4">
-                    <input type="text" placeholder="Your name" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-lg">
-                    <input type="email" placeholder="your.email@example.com" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-lg">
-                    <textarea placeholder="Tell us about your project..." class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-lg h-32"></textarea>
-                    <button class="w-full py-3 bg-yellow-400 text-black rounded-lg font-bold hover:bg-yellow-500 transition-colors">Send Message</button>
-                </form>
+                <form action="https://formspree.io/f/你的FormID" method="POST" class="bg-white dark:bg-darkCard p-8 rounded-2xl shadow-sm space-y-4">
+    <div>
+        <label class="block text-sm font-medium mb-1 dark:text-slate-300">Name</label>
+        <input type="text" name="name" required placeholder="Your name" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-lg dark:text-white">
+    </div>
+
+    <div>
+        <label class="block text-sm font-medium mb-1 dark:text-slate-300">Email Address</label>
+        <input type="email" name="email" required placeholder="your.email@example.com" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-lg dark:text-white">
+    </div>
+
+    <div>
+        <label class="block text-sm font-medium mb-1 dark:text-slate-300">Message</label>
+        <textarea name="message" required placeholder="Tell us about your project..." class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-lg h-32 dark:text-white"></textarea>
+    </div>
+
+    <button type="submit" class="w-full py-3 bg-slate-900 text-white dark:bg-white dark:text-black rounded-lg font-bold hover:opacity-90 transition-all">
+        Send Message
+    </button>
+</form>
             </div>
         </div>
     </section>
