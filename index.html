@@ -11,7 +11,264 @@
             darkMode: 'class',
             theme: {
                 extend: {
+                    colors: {<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoCampus - Protecting Our Planet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
                     colors: {
+                        primary: '#facc15',
+                        darkBg: '#020617',
+                        darkCard: '#0f172a',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-slate-800 dark:bg-darkBg dark:text-slate-200 font-sans antialiased transition-colors duration-300">
+
+    <nav class="fixed w-full z-50 bg-white/80 dark:bg-darkBg/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-slate-900 dark:text-white">EcoCampus</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="hover:text-yellow-500 transition-colors">Home</a>
+                    <a href="#services" class="hover:text-yellow-500 transition-colors">Services</a>
+                    <a href="#quiz" class="hover:text-yellow-500 transition-colors">Quiz</a>
+                    <a href="#about" class="hover:text-yellow-500 transition-colors">About</a>
+                    <a href="#team" class="hover:text-yellow-500 transition-colors">Team</a>
+                    <a href="#contact" class="hover:text-yellow-500 transition-colors">Contact</a>
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800">
+                        <i id="theme-icon" class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-50 dark:bg-darkBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="lg:flex lg:items-center">
+                <div class="lg:w-1/2">
+                    <h1 class="text-5xl lg:text-7xl font-bold text-slate-900 dark:text-white leading-tight mb-6">
+                        Empowering Students to Protect the Earth
+                    </h1>
+                    <p class="text-xl text-slate-600 dark:text-slate-400 mb-8">
+                        Turning campus awareness into sustainable action for a greener future.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="px-8 py-3 bg-yellow-400 text-black font-semibold rounded-lg hover:bg-yellow-500 transition-all">Get Started <i class="fas fa-arrow-right ml-2"></i></a>
+                        <a href="#about" class="px-8 py-3 border border-slate-400 rounded-lg font-semibold hover:bg-slate-800 dark:hover:bg-slate-700 transition-all dark:text-white">Learn More</a>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 mt-12 lg:mt-0">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09" alt="Hero" class="rounded-3xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-white dark:bg-slate-900 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-4">Our Services</h2>
+            <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-16">We empower the student community with practical solutions to protect the Earth.</p>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="p-8 border border-slate-200 dark:border-slate-800 rounded-2xl hover:shadow-xl transition-all">
+                    <i class="fas fa-car text-3xl mb-6 text-yellow-500"></i>
+                    <h3 class="font-bold text-xl mb-4 dark:text-white">Shared Transportation</h3>
+                    <p class="text-slate-500 text-sm">We promote cycling, walking, and campus shuttles.</p>
+                </div>
+                <div class="p-8 border border-slate-200 dark:border-slate-800 rounded-2xl hover:shadow-xl transition-all">
+                    <i class="fas fa-recycle text-3xl mb-6 text-yellow-500"></i>
+                    <h3 class="font-bold text-xl mb-4 dark:text-white">Resource Recycling</h3>
+                    <p class="text-slate-500 text-sm">We encourage a circular lifestyle—reducing plastic use.</p>
+                </div>
+                <div class="p-8 border border-slate-200 dark:border-slate-800 rounded-2xl hover:shadow-xl transition-all">
+                    <i class="fas fa-tree text-3xl mb-6 text-yellow-500"></i>
+                    <h3 class="font-bold text-xl mb-4 dark:text-white">Tree Planting</h3>
+                    <p class="text-slate-500 text-sm">Restore local biodiversity and breathe cleaner air.</p>
+                </div>
+                <div class="p-8 border border-slate-200 dark:border-slate-800 rounded-2xl hover:shadow-xl transition-all">
+                    <i class="fas fa-sun text-3xl mb-6 text-yellow-500"></i>
+                    <h3 class="font-bold text-xl mb-4 dark:text-white">Solar Panel</h3>
+                    <p class="text-slate-500 text-sm">We advocate for solar energy adoption on campus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quiz" class="py-24 bg-slate-50 dark:bg-darkBg transition-colors">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-white dark:bg-darkCard p-8 md:p-12 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm text-center">
+                <h2 class="text-3xl font-bold mb-4 dark:text-white">Kuiz Pengetahuan Eco</h2>
+                <div id="quiz-container">
+                    <div id="question-box" class="mb-10">
+                        <h3 id="question-text" class="text-xl font-semibold mb-6 dark:text-white leading-relaxed">Loading...</h3>
+                        <div id="options-container" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+                    </div>
+                    <div class="flex justify-between items-center text-sm text-slate-400 border-t border-slate-200 dark:border-slate-700 pt-6">
+                        <p>Soalan <span id="current-index">1</span> / <span id="total-questions">3</span></p>
+                        <p id="score-display">Skor: 0</p>
+                    </div>
+                </div>
+                <div id="result-box" class="hidden py-10">
+                    <i class="fas fa-medal text-6xl text-yellow-500 mb-6"></i>
+                    <h3 class="text-3xl font-bold mb-4 dark:text-white">Kuiz Selesai!</h3>
+                    <p id="final-score" class="text-xl mb-8 dark:text-slate-300"></p>
+                    <button onclick="restartQuiz()" class="px-8 py-3 bg-yellow-400 text-black rounded-lg font-bold hover:bg-yellow-500">Main Semula</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-white dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-16">
+            <div class="lg:w-1/2"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c" alt="About" class="rounded-2xl shadow-lg"></div>
+            <div class="lg:w-1/2">
+                <h2 class="text-4xl font-bold mb-6 dark:text-white">About us</h2>
+                <p class="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">EcoCampus is a movement dedicated to protecting our planet and championing sustainable living.</p>
+                <div class="grid grid-cols-3 gap-8 text-center">
+                    <div><div class="text-3xl font-bold dark:text-white">1000+</div><p class="text-sm text-slate-500">People</p></div>
+                    <div><div class="text-3xl font-bold dark:text-white">50+</div><p class="text-sm text-slate-500">Projects</p></div>
+                    <div><div class="text-3xl font-bold dark:text-white">100%</div><p class="text-sm text-slate-500">Commitment</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="py-24 bg-slate-50 dark:bg-darkBg">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-16 dark:text-white">Meet Our Team</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div>
+                    <img src="https://github.com/TeyYewKuan/Pec/blob/main/tey.png.png?raw=true" class="w-full aspect-[3/4] object-cover rounded-2xl mb-4">
+                    <h3 class="font-bold dark:text-white">Tey Yew Kuan</h3>
+                    <p class="text-slate-500 text-sm">Project Leader</p>
+                </div>
+                <div>
+                    <img src="https://github.com/TeyYewKuan/Pec/blob/main/hew.png.png?raw=true" class="w-full aspect-[3/4] object-cover rounded-2xl mb-4">
+                    <h3 class="font-bold dark:text-white">Hew Hong Shi</h3>
+                    <p class="text-slate-500 text-sm">Creative Designer</p>
+                </div>
+                <div>
+                    <img src="https://github.com/TeyYewKuan/Pec/blob/main/goei.png.png?raw=true" class="w-full aspect-[3/4] object-cover rounded-2xl mb-4">
+                    <h3 class="font-bold dark:text-white">Goei Xuan</h3>
+                    <p class="text-slate-500 text-sm">Sustainability Coordinator</p>
+                </div>
+                <div>
+                    <img src="https://github.com/TeyYewKuan/Pec/blob/main/yong.png.png?raw=true" class="w-full aspect-[3/4] object-cover rounded-2xl mb-4">
+                    <h3 class="font-bold dark:text-white">Yong Yi Kang</h3>
+                    <p class="text-slate-500 text-sm">Technical Specialist</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-white dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 dark:text-white">Secure Our Future</h2>
+                <p class="text-slate-500">Reach out to the 'Protect' team today.</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div class="space-y-8">
+                    <div class="flex items-center space-x-4">
+                        <div class="p-4 bg-slate-100 dark:bg-slate-800 rounded-xl text-yellow-500"><i class="fas fa-phone"></i></div>
+                        <div><p class="text-sm text-slate-500">Phone</p><p class="font-semibold dark:text-white">011-65568558</p></div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="p-4 bg-slate-100 dark:bg-slate-800 rounded-xl text-yellow-500"><i class="fas fa-envelope"></i></div>
+                        <div><p class="text-sm text-slate-500">Email</p><p class="font-semibold dark:text-white">D250313C@sc.edu.my</p></div>
+                    </div>
+                </div>
+                <form action="https://formspree.io/f/xnjlzoya" method="POST" class="bg-slate-50 dark:bg-darkCard p-8 rounded-2xl shadow-sm space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium mb-1 dark:text-slate-300">Name</label>
+                        <input type="text" name="name" required placeholder="Your name" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-lg dark:text-white">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1 dark:text-slate-300">Email Address</label>
+                        <input type="email" name="email" required placeholder="your@email.com" class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-lg dark:text-white">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1 dark:text-slate-300">Message</label>
+                        <textarea name="message" required placeholder="Tell us about your project..." class="w-full p-3 border dark:border-slate-700 dark:bg-slate-800 rounded-lg h-32 dark:text-white"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3 bg-slate-900 text-white dark:bg-white dark:text-black rounded-lg font-bold hover:opacity-90 transition-all">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-12 text-center">
+        <p class="text-slate-500 text-sm">&copy; 2026 EcoCampus. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        themeToggleBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            themeIcon.classList.toggle('fa-moon');
+            themeIcon.classList.toggle('fa-sun');
+        });
+
+        // Quiz Logic
+        const myQuizData = [
+            { q: "Adakah anda patut tutup lampu jika keluar dari bilik lebih daripada 10 minit?", o: ["Ya, tutup lampu sentiasa", "Tidak perlu, biarkan terbuka"], a: 0 },
+            { q: "Mengitar semula satu tin aluminium dapat menjimatkan tenaga yang cukup untuk?", o: ["Menonton TV selama 3 jam", "Menggunakan komputer selama 1 jam"], a: 0 },
+            { q: "Manakah cara pengangkutan yang paling mesra alam?", o: ["Memandu kereta sendiri", "Berjalan kaki atau berbasikal"], a: 1 }
+        ];
+
+        let currentQ = 0; let myScore = 0;
+        const qText = document.getElementById('question-text');
+        const optCont = document.getElementById('options-container');
+        const cIdx = document.getElementById('current-index');
+        const tQs = document.getElementById('total-questions');
+        const sDisp = document.getElementById('score-display');
+        const qCont = document.getElementById('quiz-container');
+        const rBox = document.getElementById('result-box');
+        const fScore = document.getElementById('final-score');
+
+        function loadMyQuiz() {
+            const data = myQuizData[currentQ];
+            qText.innerText = data.q;
+            cIdx.innerText = currentQ + 1;
+            tQs.innerText = myQuizData.length;
+            optCont.innerHTML = ''; 
+            data.o.forEach((option, index) => {
+                const btn = document.createElement('button');
+                btn.innerText = option;
+                btn.className = "w-full py-4 px-6 border border-slate-200 dark:border-slate-700 rounded-xl hover:bg-yellow-400 hover:text-black transition-all text-left font-medium dark:text-slate-300";
+                btn.onclick = () => {
+                    if (index === data.a) { myScore++; sDisp.innerText = `Skor: ${myScore}`; }
+                    currentQ++;
+                    if (currentQ < myQuizData.length) loadMyQuiz();
+                    else { qCont.classList.add('hidden'); rBox.classList.remove('hidden'); fScore.innerText = `Skor akhir anda ialah ${myScore} / ${myQuizData.length}`; }
+                };
+                optCont.appendChild(btn);
+            });
+        }
+        function restartQuiz() {
+            currentQ = 0; myScore = 0; sDisp.innerText = `Skor: 0`;
+            qCont.classList.remove('hidden'); rBox.classList.add('hidden'); loadMyQuiz();
+        }
+        window.onload = loadMyQuiz;
+    </script>
+</body>
+</html>
                         primary: '#facc15',
                         darkBg: '#020617',
                         darkCard: '#0f172a',
