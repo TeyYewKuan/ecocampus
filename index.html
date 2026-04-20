@@ -203,20 +203,23 @@
     </footer>
 
     <script>
-        // Theme Toggle
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const themeIcon = document.getElementById('theme-icon');
-        themeToggleBtn.addEventListener('click', () => {
-            document.documentElement.classList.toggle('dark');
-            themeIcon.classList.toggle('fa-moon');
-            themeIcon.classList.toggle('fa-sun');
-        });
-
         // Quiz Logic
         const myQuizData = [
-            { q: "Adakah anda patut tutup lampu jika keluar dari bilik lebih daripada 10 minit?", o: ["Ya, tutup lampu sentiasa", "Tidak perlu, biarkan terbuka"], a: 0 },
-            { q: "Mengitar semula satu tin aluminium dapat menjimatkan tenaga yang cukup untuk?", o: ["Menonton TV selama 3 jam", "Menggunakan komputer selama 1 jam"], a: 0 },
-            { q: "Manakah cara pengangkutan yang paling mesra alam?", o: ["Memandu kereta sendiri", "Berjalan kaki atau berbasikal"], a: 1 }
+            { 
+                q: "Adakah anda patut tutup lampu jika keluar dari bilik lebih daripada 10 minit?", 
+                o: ["Ya, tutup lampu sentiasa", "Tidak perlu, biarkan terbuka"], 
+                a: 0 
+            },
+            { 
+                q: "Manakah cara pengangkutan yang paling mesra alam？", 
+                o: ["Memandu kereta sendiri", "Berjalan kaki atau berbasikal"], 
+                a: 1 
+            },
+            { 
+                q: "Antara berikut, yang manakah pernyataan yang betul tentang 'Kurangkan, Guna Semula, Kitar Semula (3R)'?", 
+                o: ["Utamakan kitar semula, kemudian guna semula, dan akhirnya kurangkan", "Utamakan mengurangkan, kemudian menggunakan semula, dan akhirnya mengitar semula"], 
+                a: 1 
+            }
         ];
 
         let currentQ = 0; let myScore = 0;
@@ -234,25 +237,56 @@
             qText.innerText = data.q;
             cIdx.innerText = currentQ + 1;
             tQs.innerText = myQuizData.length;
+            
+            // 清空旧选项
             optCont.innerHTML = ''; 
+            
             data.o.forEach((option, index) => {
                 const btn = document.createElement('button');
                 btn.innerText = option;
+                // 保持你原本的样式
                 btn.className = "w-full py-4 px-6 border border-slate-200 dark:border-slate-700 rounded-xl hover:bg-yellow-400 hover:text-black transition-all text-left font-medium dark:text-slate-300";
                 btn.onclick = () => {
-                    if (index === data.a) { myScore++; sDisp.innerText = `Skor: ${myScore}`; }
+                    // 判断答案
+                    if (index === data.a) { 
+                        myScore++; 
+                        sDisp.innerText = `Skor: ${myScore}`; 
+                    }
+                    
                     currentQ++;
-                    if (currentQ < myQuizData.length) loadMyQuiz();
-                    else { qCont.classList.add('hidden'); rBox.classList.remove('hidden'); fScore.innerText = `Skor akhir anda ialah ${myScore} / ${myQuizData.length}`; }
+                    if (currentQ < myQuizData.length) {
+                        loadMyQuiz();
+                    } else {
+                        // 显示结果
+                        qCont.classList.add('hidden');
+                        rBox.classList.remove('hidden');
+                        fScore.innerText = `Skor akhir anda ialah ${myScore} / ${myQuizData.length}`;
+                    }
                 };
                 optCont.appendChild(btn);
             });
         }
+
         function restartQuiz() {
-            currentQ = 0; myScore = 0; sDisp.innerText = `Skor: 0`;
-            qCont.classList.remove('hidden'); rBox.classList.add('hidden'); loadMyQuiz();
+            currentQ = 0; 
+            myScore = 0; 
+            sDisp.innerText = `Skor: 0`;
+            qCont.classList.remove('hidden');
+            rBox.classList.add('hidden');
+            loadMyQuiz();
         }
+
+        // 初始化
         window.onload = loadMyQuiz;
+
+        // Theme Toggle (保持原有功能)
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        themeToggleBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            themeIcon.classList.toggle('fa-moon');
+            themeIcon.classList.toggle('fa-sun');
+        });
     </script>
 </body>
 </html>
