@@ -12,7 +12,7 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#facc15', 
+                        primary: '#facc15', // Changed to Yellow-400
                         darkBg: '#020617',
                         darkCard: '#0f172a',
                     }
@@ -92,7 +92,7 @@
         </div>
     </section>
 
-   <script>
+    <script>
     // Data Kuiz dalam Bahasa Melayu
     const quizData = [
         {
@@ -151,6 +151,31 @@
         
         currentQuestion++;
         if (currentQuestion < quizData.length) {
+            loadQuiz();
+        } else {
+            showResults();
+        }
+    }
+
+    function showResults() {
+        quizContainer.classList.add('hidden');
+        resultBox.classList.remove('hidden');
+        // Tukar teks keputusan ke Bahasa Melayu
+        document.getElementById('final-score').innerText = `Skor akhir anda ialah ${score} / ${quizData.length}`;
+    }
+
+    function restartQuiz() {
+        currentQuestion = 0;
+        score = 0;
+        scoreDisplay.innerText = `Skor: 0`;
+        quizContainer.classList.remove('hidden');
+        resultBox.classList.add('hidden');
+        loadQuiz();
+    }
+
+    // Mula kuiz
+    loadQuiz();
+</script>
 
     <section id="about" class="py-24 bg-slate-50 dark:bg-darkBg">
         <div class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-16">
