@@ -331,5 +331,80 @@
             themeIcon.classList.toggle('fa-sun');
         });
     </script>
+    <script>
+    // 1. 数据：马来文题目
+    const myQuizData = [
+        {
+            q: "Adakah anda patut tutup lampu jika keluar dari bilik lebih daripada 10 minit?",
+            o: ["Ya, tutup lampu sentiasa", "Tidak perlu, biarkan terbuka"],
+            a: 0
+        },
+        {
+            q: "Mengitar semula satu tin aluminium dapat menjimatkan tenaga yang cukup untuk?",
+            o: ["Menonton TV selama 3 jam", "Menggunakan komputer selama 1 jam"],
+            a: 0
+        },
+        {
+            q: "Manakah cara pengangkutan yang paling mesra alam?",
+            o: ["Memandu kereta sendiri", "Berjalan kaki atau berbasikal"],
+            a: 1
+        }
+    ];
+
+    let currentQ = 0;
+    let myScore = 0;
+
+    // 2. 加载题目的函数
+    function loadMyQuiz() {
+        const data = myQuizData[currentQ];
+        document.getElementById('question-text').innerText = data.q;
+        document.getElementById('current-index').innerText = currentQ + 1;
+        document.getElementById('total-questions').innerText = myQuizData.length;
+        
+        const btnContainer = document.getElementById('options-container');
+        btnContainer.innerHTML = ''; // 清空旧按钮
+
+        data.o.forEach((option, index) => {
+            const button = document.createElement('button');
+            button.innerText = option;
+            button.className = "w-full py-4 px-6 border border-slate-200 dark:border-slate-700 rounded-xl hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all text-left font-medium dark:text-slate-300";
+            button.onclick = () => handleAnswer(index);
+            btnContainer.appendChild(button);
+        });
+    }
+
+    // 3. 处理点击答案
+    function handleAnswer(idx) {
+        if (idx === myQuizData[currentQ].a) {
+            myScore++;
+            document.getElementById('score-display').innerText = `Skor: ${myScore}`;
+        }
+        
+        currentQ++;
+        if (currentQ < myQuizData.length) {
+            loadMyQuiz();
+        } else {
+            // 显示结果
+            document.getElementById('quiz-container').classList.add('hidden');
+            document.getElementById('result-box').classList.remove('hidden');
+            document.getElementById('final-score').innerText = `Skor akhir anda ialah ${myScore} / ${myQuizData.length}`;
+        }
+    }
+
+    // 4. 重开函数
+    function restartQuiz() {
+        currentQ = 0;
+        myScore = 0;
+        document.getElementById('score-display').innerText = `Skor: 0`;
+        document.getElementById('quiz-container').classList.remove('hidden');
+        document.getElementById('result-box').classList.add('hidden');
+        loadMyQuiz();
+    }
+
+    // 5. 页面加载完立即启动
+    window.onload = function() {
+        loadMyQuiz();
+    };
+</script>
 </body>
 </html>
